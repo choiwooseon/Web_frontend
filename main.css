@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+* {
+	/* 다른 요소와의 간격*/
+	margin: 0px;
+	/*content를 감싸고 있는 간격*/
+	padding: 0px;
+
+	list-style: none;
+}
+
+header {
+	height: 50px;
+	padding: 10px 10px;
+	text-align: center;
+	/* 그림자 효과 */
+	
+}
+
+hr{
+	margin-left:100px;
+	border: 1px solid orange;
+	width: 90%
+}
+
+.start h3{
+	text-align: center;
+	margin:10px;
+}
+
+.start{
+	text-align: center;
+}
+
+
+.MyProfile{
+      	background-color: #dddddd
+}
+
+video { max-width: 80%; display: block; margin: 20px auto; }
+
+table{
+    border-collapse: collapse;
+	margin:auto;
+}
+
+.ts > h3{
+	margin-bottom: 10px;
+}
+
+.end > h3{
+	margin: 10px;
+	text-align: center;
+}
+
+.table mylife{
+    width:100%;
+    line-height:1.5;
+    margin-left: 1200px;
+    margin-bottom: 10px;
+}
+      	
+.table>tbody>tr>th, .table>tbody>tr>td {
+    border: 1px solid yellow;
+	padding: 8px;
+	line-height: 1.42;
+	border-top: 1px solide yellow;
+}
+      	
+      	
+.table>thead>tr>th {
+	border: 1px solid yellow;
+	padding: 10px 5px;
+}
