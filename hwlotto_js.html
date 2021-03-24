@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+#header{
+	border:solid 1px;
+}
+
+#header h2{
+	margin-left:10px;
+}
+
+#background{
+	text-align: center;
+	margin:20px;
+	width: auto;
+	height: 300px;
+	background-color: skyblue;
+	line-height: 200px;
+	border-radius: 20px;
+}
+
+.ball {
+	/* 옆간격 */
+	margin: 20px;
+	margin-top:100px;
+	text-align : center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: yellow;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+</style>
+</head>
+<body>
+	<div id="header">
+		<h2>대박을 기원합니다~~</h2>
+			<div id="background">
+				<div id="numbers"></div>	
+			</div>
+	</div>
+</body>
+<script>
+
+$(document).ready(function() {
+	var cnt=0;
+	var lotto = new Array(6);
+	
+	function GetLotto(){
+		//6개의 로또 번호를 저장할 배열
+		
+		var flag=true;
+		
+		
+		var number;
+		number=parseInt(Math.random()*45)+1;	
+		for(var i=0;i<6;i++){
+			if(lotto[i]==number) 
+				flag=false;
+		}
+			
+		if(flag){
+			lotto[cnt]=number;
+			
+			//document.getElementById('background').innerHTML += `<span class="ball"> ${number} </span>`;
+			var con = `<span class="ball"> ${number} </span>`;	
+			$("#background").append(con);
+			cnt++;
+		}
+		
+		if(cnt==6)
+			clearInterval(interval);
+		
+	}
+	
+	var interval = setInterval(GetLotto,1000);
+});
+</script>
+</html>
